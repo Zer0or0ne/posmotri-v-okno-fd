@@ -57,7 +57,6 @@ ol {
   align-items: flex-end;
   gap: 30px;
   min-width: 1140px;
-  min-height: 534px;
   padding: 0 30px;
 }
 
@@ -110,8 +109,8 @@ ol {
   appearance: none;
   background-color: transparent;
   border: none;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
   color: #fff;
   font-family: inherit;
   font-size: inherit;
@@ -152,6 +151,7 @@ ol {
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .title {
@@ -182,8 +182,7 @@ ol {
   background-color: #545050;
 }
 
-.content__card-link:hover .content__video-card-title,
-.content__card-link:hover .content__video-card-description {
+.content__card-link:hover {
   text-decoration: underline;
 }
 
@@ -230,7 +229,6 @@ ol {
   display: flex;
   align-items: flex-start;
   width: 390px;
-  min-height: 103px;
 }
 
 .content__video-card-title {
@@ -255,8 +253,8 @@ ol {
 .content__video-card-description {
   line-height: 0.90;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
